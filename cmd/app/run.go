@@ -12,5 +12,11 @@ func main() {
 		cell [8][8]figure
 	}
 
+	var gameBoard board
+
+	for i := 0; i < len(gameBoard.cell); i++ {
+		println(gameBoard.cell[i][0].symbol)
+	}
+
 	println("ff")
 }
