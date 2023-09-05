@@ -14,9 +14,10 @@ func main() {
 
 	var gameBoard board
 
+	gameBoard.cell[0][0] = figure{true, "⛀", 0}
+
 	for i := 0; i < len(gameBoard.cell); i++ {
 		println(gameBoard.cell[i][0].symbol)
 	}
 
-	println("ff")
 }
