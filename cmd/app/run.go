@@ -4,20 +4,17 @@ import (
 	"fmt"
 )
 
-func main() {
+type figure struct {
+	color  bool
+	symbol string
+	price  int
+}
 
-	type figure struct {
-		color  bool
-		symbol string
-		price  int
-	}
+type board struct {
+	cell [8][8]figure
+}
 
-	type board struct {
-		cell [8][8]figure
-	}
-
-	var gameBoard board
-
+func setFigures(gameBoard *board) {
 	for i := 0; i < len(gameBoard.cell); i++ {
 		for j := 0; j < 3; j++ {
 			if (j+i)%2 != 0 {
@@ -30,7 +27,9 @@ func main() {
 			}
 		}
 	}
+}
 
+func printBoard(gameBoard board) {
 	for i := 0; i < len(gameBoard.cell); i++ {
 		for j := 0; j < len(gameBoard.cell); j++ {
 			if len(gameBoard.cell[i][j].symbol) == 0 {
@@ -45,5 +44,13 @@ func main() {
 		}
 		fmt.Print("\n")
 	}
+}
+
+func main() {
+
+	var gameBoard board
+
+	setFigures(&gameBoard)
+	printBoard(gameBoard)
 
 }
