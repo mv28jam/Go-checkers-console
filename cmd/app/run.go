@@ -31,6 +31,7 @@ func setFigures(gameBoard *board) {
 
 func printBoard(gameBoard board) {
 	for i := 0; i < len(gameBoard.cell); i++ {
+		fmt.Print(i+1, " ")
 		for j := 0; j < len(gameBoard.cell); j++ {
 			if len(gameBoard.cell[i][j].symbol) == 0 {
 				if (j+i)%2 == 0 {
@@ -44,6 +45,7 @@ func printBoard(gameBoard board) {
 		}
 		fmt.Print("\n")
 	}
+	fmt.Println("  a b c d e f g h")
 }
 
 func main() {
