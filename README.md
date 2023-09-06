@@ -1,4 +1,4 @@
-# Go-chess-console-and-api
+# Go checkers console
 
 ■ ⛀ ■ ⛀ ■ ⛀ ■ ⛀   
 ⛀ ■ ⛀ ■ ⛀ ■ ⛀ ■   
